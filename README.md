@@ -1,2 +1,2 @@
 # SRU_for_GCI
-Statistical Recurrent Unit based models for detecting nonlinear Granger causality in a multivariate time series
+This repository contains the python code for our ICLR 2020 paper: ``Economy Statistical Recurrent Units For Inferring Nonlinear Granger Causality"

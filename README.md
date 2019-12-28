@@ -9,23 +9,18 @@ This repository contains the python code for our ICLR 2020 paper > Economy Stati
 - NumPy, SciPy
 
 
-
 ## Example usage: ###### Recommend using the tuned hyperparameters listed in Appendix-E of the ICLR-2020 paper) 
 
-### Model: SRU
-### Dataset: Lorenz-96, T=250, F=10, dataset id = 1
+#### Model: SRU    Dataset: Lorenz-96, T=250, F=10, dataset id = 1
 - python main.py --dataset lorenz --dsid 1 --model sru --n 10 --T 250 --F 10 --nepochs 2000 --mu1 0.021544 --mu2 0.031623 --mu3 0 --lr 0.001 --joblog crossval/logs/test.npz
 
-### Model: eSRU_2LF (Economy SRU with two-layer MLP as feedback's second stage)  
-### Dataset: VAR, T=250, F=10, dataset id = 1
+#### Model: eSRU_2LF (Economy SRU with two-layer MLP as feedback's second stage)    Dataset: VAR, T=250, F=10, dataset id = 1
 - python main.py --dataset var --dsid 1 --model eSRU_2LF --n 10 --T 500 --F 30 --nepochs 2000 --mu1 0.021544 --mu2 0.031623 --mu3 0.464159 --lr 0.001 --joblog crossval/logs/test.npz
 
-### Model: eSRU_2LF (Economy SRU with two-layer MLP as feedback's second stage) 
-### Dataset: NetSim (BOLD signals), T=200, dataset id = 1
+#### Model: eSRU_2LF (Economy SRU with two-layer MLP as feedback's second stage)    Dataset: NetSim (BOLD signals), T=200, dataset id = 1
 - python main.py --dataset netsim --dsid 1 --model eSRU_2LF --n 15 --T 200 --F 0 --nepochs 2000 --mu1 0.021544 --mu2 0.031623 --mu3 0.464159 --lr 0.001 --joblog crossval/logs/test.npz
 
-### Model: eSRU_1LF (Economy SRU with single layer MLP as feedback's second stage)
-### Dataset: Dream-3 (Yeast1), T=966 
+#### Model: eSRU_1LF (Economy SRU with single layer MLP as feedback's second stage)    Dataset: Dream-3 (Yeast1), T=966 
 - python main.py --dataset gene --dsid 1 --model eSRU_1LF --n 100 --T 966 --F 0 --nepochs 2000 --mu1 0.021544 --mu2 0.031623 --mu3 0.464159 --lr 0.001 --joblog crossval/logs/test.npz
 
 

@@ -5,7 +5,6 @@ This repository contains the python code for our ICLR 2020 paper: [Economy Stati
 - Python 3.7
 - CUDA 10.1
 - PyTorch 1.0.1
-- torchvision 0.2.1
 - NumPy, SciPy
 
 ## Example usage: 

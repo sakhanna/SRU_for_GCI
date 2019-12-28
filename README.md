@@ -1,5 +1,5 @@
 # SRU_for_GCI
-This repository contains the python code for our ICLR 2020 paper:[Economy Statistical Recurrent Units For Inferring Nonlinear Granger Causality](https://arxiv.org/abs/1911.09879).
+This repository contains the python code for our ICLR 2020 paper: [Economy Statistical Recurrent Units For Inferring Nonlinear Granger Causality](https://arxiv.org/abs/1911.09879).
 
 ## Dependencies
 - Python 3.7
@@ -24,32 +24,19 @@ This repository contains the python code for our ICLR 2020 paper:[Economy Statis
 
 ## Input arguments
 
-dataset :: string   :: lorenz/var/netsim/gene
-
-dsid    :: int      :: dataset id (Range: 1-5)
-
-model   :: string   :: sru (Standard SRU)
-                       eSRU_1LF (Economy SRU with feedback's second stage implemented as single layer MLP)
-                       eSRU_2LF (Economy SRU with feedback's second stage implemented as two layer MLP)
-
-n       :: int 	    :: No. of timeseries/Nodes in the Granger causal graph 
-                       (n = 10 for lorenz/var, n = 15 for netsim, n = 100 for gene)
-
-T       :: int      :: Length of input timeseries 
-                       (T = 250/500/1000 for lorenz, T =500/1000 for var, T = 200 for netsim, T = 966 for gene)
-
-F       :: int      :: External forcing in lorenz model/ percentage sparsity in var model 
-                       (F = 10/40 for lorenz, F = 30 for var, F = 0 for gene/netsim)
-
-nepochs	:: int      ::  No. of training epochs
-
-mu1     :: float    ::  Bias for ridge regularization of all unregularized weights in the model 
-
-mu2     :: float    ::  Bias for block sparse regularization of input layer weights
-
-mu3     :: float    ::  Bias for group sparse regularization of output feature layer weights in Economy SRU 
-
-lr      :: float    ::  Learning rate for BPTT step in the proximal gradient descent algorithm
+|Argument| Type     | lorenz/var/netsim/gene   |
+|--------|----------|-------------------------|
+|dataset | string   | lorenz/var/netsim/gene   |
+|dsid    | int      | dataset id (Range: 1-5) |
+|model   | string   | <\p> sru (Standard SRU) 1<\br> eSRU_1LF (Economy SRU with feedback's second stage implemented as single layer MLP) 2<\br> eSRU_2LF (Economy SRU with feedback's second stage implemented as two layer MLP) 2<\p> |
+|n       | int 	    | No. of timeseries/Nodes in the Granger causal graph (n = 10 for lorenz/var, n = 15 for netsim, n = 100 for gene) |
+|T       | int      | Length of input timeseries (T = 250/500/1000 for lorenz, T =500/1000 for var, T = 200 for netsim, T = 966 for gene) |
+|F       | int      | External forcing in lorenz model/ percentage sparsity in var model (F = 10/40 for lorenz, F = 30 for var, F = 0 for gene/netsim) |
+|nepochs	| int      |  No. of training epochs |
+|mu1     | float    |  Bias for ridge regularization of all unregularized weights in the model  |
+|mu2     | float    |  Bias for block sparse regularization of input layer weights  |
+|mu3     | float    |  Bias for group sparse regularization of output feature layer weights in Economy SRU |
+|lr      | float    |  Learning rate for BPTT step in the proximal gradient descent algorithm |
 
 
 ## Output 

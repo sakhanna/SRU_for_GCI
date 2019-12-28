@@ -24,11 +24,11 @@ This repository contains the python code for our ICLR 2020 paper: [Economy Stati
 
 ## Input arguments
 
-|Argument| Type     | lorenz/var/netsim/gene   |
+|Argument| Type     | Description          |
 |--------|----------|-------------------------|
 |dataset | string   | lorenz/var/netsim/gene   |
 |dsid    | int      | dataset id (Range: 1-5) |
-|model   | string   | <\p> sru (Standard SRU) 1<\br> eSRU_1LF (Economy SRU with feedback's second stage implemented as single layer MLP) 2<\br> eSRU_2LF (Economy SRU with feedback's second stage implemented as two layer MLP) 2<\p> |
+|model   | string   | <p>sru (Standard SRU) <br> eSRU_1LF (Economy SRU with feedback's second stage implemented as single layer MLP) <br> eSRU_2LF (Economy SRU with feedback's second stage implemented as two layer MLP) <\p>  |
 |n       | int 	    | No. of timeseries/Nodes in the Granger causal graph (n = 10 for lorenz/var, n = 15 for netsim, n = 100 for gene) |
 |T       | int      | Length of input timeseries (T = 250/500/1000 for lorenz, T =500/1000 for var, T = 200 for netsim, T = 966 for gene) |
 |F       | int      | External forcing in lorenz model/ percentage sparsity in var model (F = 10/40 for lorenz, F = 30 for var, F = 0 for gene/netsim) |

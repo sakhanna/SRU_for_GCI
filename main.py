@@ -16,8 +16,8 @@ from matplotlib import pyplot as plt
 import time
 import sys
 from models.sru import SRU, trainSRU
-from models.eSRU_1LF import eSRU_1LF, train_eSRU_1LF
-from models.eSRU_2LF import eSRU_2LF, train_eSRU_2LF
+from models.esru_1LF import eSRU_1LF, train_eSRU_1LF
+from models.esru_2LF import eSRU_2LF, train_eSRU_2LF
 from utils.utilFuncs import env_config, loadTrainingData, loadTrueNetwork, getCausalNodes, count_parameters, getGeneTrainingData  
 
 
@@ -25,13 +25,13 @@ from utils.utilFuncs import env_config, loadTrainingData, loadTrueNetwork, getCa
 parser = argparse.ArgumentParser()
 parser.add_argument('--device', type=str, default='cuda:3',
                      help='device, default: cuda:3')
-parser.add_argument('--dataset', type=str, default='VAR',
-                     help='dataset type, default: VAR')
+parser.add_argument('--dataset', type=str, default='var',
+                     help='dataset type, default: var')
 parser.add_argument('--dsid', type=int, default=1,
                      help='dataset id, default: 1')
 parser.add_argument('--T', type=int, default=10,
-                     help='training size, default: 10')
-parser.add_argument('--F', type=int, default=10,
+                     help='training size, default: 1000')
+parser.add_argument('--F', type=int, default=30,
                      help='chaos, default: 10')
 parser.add_argument('--n', type=int, default=10,
                      help='num of timeseries, default: 10')
